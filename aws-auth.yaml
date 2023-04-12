@@ -1,19 +1,38 @@
+# apiVersion: v1
+# data:
+#   mapRoles: |
+#     - groups:
+#       - system:bootstrappers
+#       - system:nodes
+#       rolearn: arn:aws:iam::504666222292:role/eksctl-spot-cluster-nodegroup-spo-NodeInstanceRole-14K7NCR7LGQ65
+#       username: system:node:{{EC2PrivateDNSName}}
+#   mapUsers: |
+#     - userarn: arn:aws:iam::752692907119:user/roboshop-admin
+#       username: roboshop-admin
+
+# kind: ConfigMap
+# metadata:
+#   creationTimestamp: "2023-04-09T12:11:45Z"
+#   name: aws-auth
+#   namespace: kube-system
+#   resourceVersion: "1395"
+#   uid: 4bef6d5d-d603-4496-884e-aaa5ec83af48
+---
 apiVersion: v1
 data:
   mapRoles: |
     - groups:
       - system:bootstrappers
       - system:nodes
-      rolearn: arn:aws:iam::504666222292:role/eksctl-spot-cluster-nodegroup-spo-NodeInstanceRole-14K7NCR7LGQ65
+      rolearn: arn:aws:iam::504666222292:role/eksctl-spot-cluster-nodegroup-spo-NodeInstanceRole-PS37TOCHG2NO
       username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
     - userarn: arn:aws:iam::752692907119:user/roboshop-admin
       username: roboshop-admin
-
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2023-04-09T12:11:45Z"
+  creationTimestamp: "2023-04-12T06:53:03Z"
   name: aws-auth
   namespace: kube-system
-  resourceVersion: "1395"
-  uid: 4bef6d5d-d603-4496-884e-aaa5ec83af48
+  resourceVersion: "1295"
+  uid: 3e01a52b-dc3a-4835-99ed-3a18852fbea3
