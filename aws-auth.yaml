@@ -36,6 +36,7 @@
 #   namespace: kube-system
 #   resourceVersion: "1295"
 #   uid: 3e01a52b-dc3a-4835-99ed-3a18852fbea3
+
 ---
 apiVersion: v1
 data:
